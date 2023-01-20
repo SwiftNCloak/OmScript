@@ -12,7 +12,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 while True:
-    text = input('run> ')
+    text = input('oms> ')
     result, error = oms.run('<stdin>', text)
 
     if error: print(bcolors.WARNING + error.as_string() + bcolors.ENDC)
