@@ -1,3 +1,5 @@
+import oms
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -11,4 +13,7 @@ class bcolors:
 
 while True:
     text = input('run> ')
-    print(bcolors.OKGREEN + text + bcolors.ENDC)
+    result, error = oms.run(text)
+
+    if error: print(bcolors.WARNING + error.as_string() + bcolors.ENDC)
+    else: print(bcolors.OKGREEN + text + bcolors.ENDC)
