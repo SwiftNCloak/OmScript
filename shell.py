@@ -16,4 +16,4 @@ while True:
     result, error = oms.run(text)
 
     if error: print(bcolors.WARNING + error.as_string() + bcolors.ENDC)
-    else: print(bcolors.OKGREEN + text + bcolors.ENDC)
+    else: print(bcolors.OKGREEN + result + bcolors.ENDC)
