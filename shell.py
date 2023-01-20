@@ -13,7 +13,7 @@ class bcolors:
 
 while True:
     text = input('run> ')
-    result, error = oms.run(text)
+    result, error = oms.run('<stdin>', text)
 
     if error: print(bcolors.WARNING + error.as_string() + bcolors.ENDC)
-    else: print(bcolors.OKGREEN + result + bcolors.ENDC)
+    else: print(bcolors.OKGREEN + str(result) + bcolors.ENDC)
