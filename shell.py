@@ -43,5 +43,5 @@ while True:
     text = input(bg.orange + fg.black + 'oms>' + bcolors.ENDC + ' ')
     result, error = oms.run('<stdin>', text)
 
-    if error: print(bcolors.FAIL + error.as_string() + bcolors.ENDC)
+    if error: print(bcolors.FAIL + "⚠ OOPSIE WOOPSIE! \n" + error.as_string() + bcolors.ENDC)
     else: print(bcolors.OKGREEN + str(result) + bcolors.ENDC)
